@@ -16,12 +16,17 @@ function App() {
       <Routes>
         <Route path='/' element={<MainPage/>}></Route>
         <Route path='/freeboard' element={<FreeBoard/>}></Route>
-      
+        <Route path='*' element={<NotFound/>}></Route>
       </Routes>
     </div>    
   );
 }
 
+function NotFound() {
+  return (
+    <div>404 Not found</div>
+  )
+}
 
 function FreeBoard() {
   return (
