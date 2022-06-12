@@ -1,8 +1,10 @@
 @import url('./static/css/reset.css');
 
 :root {
-  /* background */
+  /* color */
   --nav-background : #fff8e1;
+  --black-color : black;
+  --white-color : white;
 
   /* padding */
   --padding-small : 10px;
@@ -16,13 +18,17 @@
 
   /* font size */
   --font-small : 10px;
+  --font-content : 20px;
   --font-medium : 30px;
   --font-large : 50px;
+
+  /* border */
+  --board-bottom : 1px solid grey;
 }
 
 a, li {
   text-decoration: none;
-  color: black;
+  color: var(--black-color);
   transition: all 0.1s linear;
   cursor: pointer;
   margin-right: var(--margin-medium);
@@ -32,6 +38,20 @@ a:hover,li:hover {
   transform: scale(1.1);
 }
 
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--nav-background);
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* navbar */
 .navbar {
   padding : var(--padding-medium);
   background-color: var(--nav-background);
@@ -48,3 +68,35 @@ a:hover,li:hover {
 .navbar ul {
   display: flex;
 }
+
+/* main page */
+.main-page > h1 {
+  padding: var(--padding-medium);
+  font-size: var(--font-large);
+}
+
+/* freeboard page */
+.freeboard-page {
+  padding: var(--padding-medium);
+  border-bottom: var(--board-bottom);
+}
+
+.freeboard-page > h1 {
+  font-size: var(--font-medium);
+  margin-bottom: var(--margin-medium);
+}
+
+.freeboard-page p {
+  font-size: var(--font-content);  
+}
+
+.freeboard-page h3 {
+  margin-top: var(--margin-medium);
+}
+
+.freeboard-page button {
+  padding: var(--padding-small) calc(var(--padding-small) * 2);
+  margin-top: var(--margin-medium);
+  margin-right: var(--margin-medium);
+}
+
