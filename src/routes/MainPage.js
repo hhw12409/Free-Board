@@ -1,6 +1,8 @@
 function MainPage() {
   return (
-    <div>MainPage</div>
+    <div className='main-page'>
+      <h1>😀Free-Board site</h1>
+    </div>
   )
 }
 
