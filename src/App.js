@@ -1,18 +1,15 @@
 import './App.css';
 import { Routes, Route, useNavigate } from 'react-router-dom';
+import Navbar from './util/Navbar';
+import MainPage from './routes/MainPage';
+import NotFound from './routes/NotFound';
+import FreeBoard from './routes/FreeBoard';
 
 function App() {
 
-  const navigate = useNavigate();
-
   return (
     <div className="App">
-      <nav className='navbar'>
-        <a href='/'>블로그</a>
-        <ul>
-          <li><a onClick={()=> { navigate('/freeboard') }}>자유게시판</a></li>
-        </ul>
-      </nav>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<MainPage/>}></Route>
         <Route path='/freeboard' element={<FreeBoard/>}></Route>
@@ -22,21 +19,4 @@ function App() {
   );
 }
 
-function NotFound() {
-  return (
-    <div>404 Not found</div>
-  )
-}
-
-function FreeBoard() {
-  return (
-    <div>Freeboard page</div>
-  )
-}
-
-function MainPage() {
-  return (
-    <div>MainPage</div>
-  )
-}
 export default App;
