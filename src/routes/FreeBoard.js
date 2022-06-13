@@ -1,5 +1,7 @@
 import data from "../data/post.js";
 
+console.log(data)
+
 function FreeBoard() {
   return (
     <div>
