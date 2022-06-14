@@ -6,7 +6,7 @@ function FreeBoard() {
       {
         data.map((data, index) => {
           return (
-            <div className='freeboard-page'>
+            <div className='freeboard-page' key={ index }>
               <h1> { data.title }</h1>
               <p>{ data.date }</p>
               <p>{ data.content }</p>
