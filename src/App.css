@@ -100,3 +100,30 @@ button:hover {
   margin-right: var(--margin-medium);
 }
 
+/* Writing page */
+.write-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.write-form > input {
+  width: 50%;
+  padding: var(--padding-small);
+  margin-bottom: var(--margin-small);
+  border-radius: var(--margin-small);
+}
+
+.write-form > div {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.write-form > div > button {
+  padding: var(--padding-small);
+  text-transform: uppercase;
+}
