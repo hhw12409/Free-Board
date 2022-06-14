@@ -4,6 +4,7 @@ import Navbar from './util/Navbar';
 import MainPage from './routes/MainPage';
 import NotFound from './routes/NotFound';
 import FreeBoard from './routes/FreeBoard';
+import Writing from './routes/Writing';
 
 function App() {
 
@@ -11,9 +12,10 @@ function App() {
     <div className="App">
       <Navbar/>
       <Routes>
-        <Route path='/' element={<MainPage/>}></Route>
-        <Route path='/freeboard' element={<FreeBoard/>}></Route>
-        <Route path='*' element={<NotFound/>}></Route>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/freeboard' element={<FreeBoard/>}/>
+        <Route path='/writing' element={<Writing/>}/>
+        <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>    
   );
