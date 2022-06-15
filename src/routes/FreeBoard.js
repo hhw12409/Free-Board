@@ -1,6 +1,10 @@
 import data from "../data/post.js";
+import { useNavigate } from 'react-router-dom';
 
 function FreeBoard() {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       {
@@ -12,7 +16,9 @@ function FreeBoard() {
               <p>{ data.content }</p>
               <h3>{ data.writer }</h3>
               <button>Delete</button>
-              <button>Edit</button>
+              <button onClick={() => {
+                { navigate('/Edit') }
+              }}>Edit</button>
             </div>
           )
         })
