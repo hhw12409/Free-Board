@@ -6,6 +6,7 @@ import NotFound from './routes/NotFound';
 import FreeBoard from './routes/FreeBoard';
 import Writing from './routes/Writing';
 import Register from './routes/Register';
+import Edit from './routes/Edit';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/freeboard' element={<FreeBoard/>}/>
         <Route path='/writing' element={<Writing/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/edit' element={<Edit/>}/>
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </div>    
