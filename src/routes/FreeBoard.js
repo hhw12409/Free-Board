@@ -19,6 +19,7 @@ function FreeBoard() {
               <button onClick={() => {
                 { navigate('/Edit') }
               }}>Edit</button>
+              <button>Change Nickname</button>
             </div>
           )
         })
