@@ -1,5 +1,5 @@
-import data from "../data/post.js";
-import { useNavigate } from 'react-router-dom';
+import post from "../data/post.js";
+import { useNavigate, Link } from 'react-router-dom';
 
 function FreeBoard() {
 
@@ -8,17 +8,15 @@ function FreeBoard() {
   return (
     <div>
       {
-        data.map((data, index) => {
+        post.map((post, index) => {
           return (
             <div className='freeboard-page' key={ index }>
-              <h1> { data.title }</h1>
-              <p>{ data.date }</p>
-              <p>{ data.content }</p>
-              <h3>{ data.writer }</h3>
+              <h1> { post.title }</h1>
+              <p>{ post.date }</p>
+              <p>{ post.content }</p>
+              <h3>{ post.writer }</h3>
               <button>Delete</button>
-              <button onClick={() => {
-                { navigate('/Edit') }
-              }}>Edit</button>
+              <Link to={`/edit/${post.id}`}><button>Edit</button></Link>
               <button>Change Nickname</button>
             </div>
           )
