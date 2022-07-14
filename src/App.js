@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './util/Navbar';
 import MainPage from './routes/MainPage';
 import NotFound from './routes/NotFound';
@@ -9,6 +9,10 @@ import Register from './routes/Register';
 import Edit from './routes/Edit';
 import post from './data/post';
 import { useState } from 'react';
+
+function handleEnName(){
+  setPosts(posts.enName)
+}
 
 function App() {
 
