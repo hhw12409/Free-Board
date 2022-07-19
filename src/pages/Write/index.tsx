@@ -1,4 +1,4 @@
-function Writing() {
+function Write() {
   return (
     <form className="write-form">
       <input placeholder="Title" name="title"></input>
@@ -9,7 +9,7 @@ function Writing() {
         <button>Submit</button>
       </div>
     </form>
-  )
+  );
 }
 
-export default Writing;
+export default Write;
