@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const NonExistencePage = () => {
   return (
     <div>
-      <h1>없는 페이지</h1>
+      <Link to="/">없는 페이지 입니다.</Link>
     </div>
   );
 };

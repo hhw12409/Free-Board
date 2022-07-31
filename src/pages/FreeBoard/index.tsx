@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import post from "../../data/post";
+import { Link } from 'react-router-dom';
+import { postAtom } from '../../atoms/atom';
+import { useRecoilValue } from 'recoil';
 
 function FreeBoard() {
-  const [posts, setPosts] = useState<Post[]>(post);
+  const posts = useRecoilValue<Post[]>(postAtom);
   return (
     <div>
       {posts.map((post) => {

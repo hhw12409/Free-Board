@@ -15,9 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/freeboard" element={<FreeBoard />} />
-        <Route path="/writing" element={<Write />} />
+        <Route path="/write" element={<Write />} />
         <Route path="/register" element={<Register />} />
-        <Route path={`/edit/:id`} element={<Edit />} />;
+        <Route path="/edit/:id" element={<Edit />} />
         <Route path="*" element={<NonExistencePage />} />
       </Routes>
     </div>
